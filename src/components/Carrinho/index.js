@@ -50,9 +50,10 @@ export default function Carrinho() {
             <section className="classinfo">
                 <InfoPreco />
             </section>
-            <footer>
+            <footer id="distance">
                 <Footer />
             </footer>
+
         </div>
     );
 }

@@ -25,8 +25,11 @@ export default function Infopreco() {
                 <span id="produtototal"><strong>Valor Total: </strong></span>
                 <span id="precoproduto"><strong>R$ 147,40</strong></span>
             </div>
+            <div className="butaofinaliza">
+                <input type="submitbuy" value="Finalizar Compra" className="finalizar-compra"/>
+            </div>
 
-            
+
         </div>
         
     )

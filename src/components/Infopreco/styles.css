@@ -15,9 +15,9 @@
 .alltable {
     padding-top: 15px;
     margin-top: 100px;
-    padding-left: 400px; 
-    padding-right: 400px; 
-    border-style: solid;
+    padding-left: 430px; 
+    padding-right: 430px; 
+    border-style: solid red;
     background-color: #DCDCDC;
 }
 
@@ -92,7 +92,29 @@
     margin-left: 200px;
 }
 
+input[type="submitbuy"] {
+    width: 135px;
+    margin-bottom: 10px;
+    border-radius: 5.5px;
+    outline: 0;
+    border: 0 none;
+    padding: 8px;
+}
 
+input[type="submitbuy"].finalizar-compra:hover {
+    background: #800000;
+    transition: 0.6s;
+    /* cursor: pointer; */
+}
+
+.butaofinaliza {
+    margin-left: 205px;
+}
+
+.finalizar-compra {
+    background: red;
+    color: white;
+}
 
 
 
