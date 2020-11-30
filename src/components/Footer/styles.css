@@ -1,0 +1,87 @@
+.container-tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "fale-conosco  ajuda-e-suporte  black-friday"
+                         "fale-conosco  ajuda-e-suporte  black-friday";
+}
+
+#title-fale-conosco {
+    color: red;
+    padding-bottom: 5px;
+}
+
+#title-td-conosco {
+    color: white;
+    padding-bottom: 1px;
+    padding-left: 45px;
+}
+
+#title-td-suporte {
+    color: white;
+    padding-bottom: 1px;
+    padding-left: 30px;
+}
+
+#title-td-black {
+    color: white;
+    padding-bottom: 1px;
+    padding-left: 20px;
+}
+
+.container-pay {
+    margin-left: 45px;
+    margin-top: 20px;
+}
+
+#title-pay {
+    color: white;
+}
+
+#logo-master {
+    background-color: white;
+    margin-right: 5px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+#logo-bit-coin {
+    background-color: white;
+    margin-right: 5px;
+}
+
+#logo-express {
+    background-color: white;
+}
+
+.container-footer {
+    margin-top: 100px;
+    margin-left: 80px;
+} 
+
+.container-media {
+    float: right;
+    margin-right: 90px;
+}
+
+#facebook-icon {
+    margin-right: 20px;
+    padding-left: 5px;
+}
+
+#twitter-icon {
+    margin-right: 20px;
+}
+
+#google-icon {
+    margin-right: 20px;
+}
+
+#text-footer {
+    color: white;
+}
+
+.container-tables {
+    padding-left: 100px;
+}
+
+

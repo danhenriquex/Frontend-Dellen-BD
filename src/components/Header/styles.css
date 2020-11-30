@@ -1,0 +1,89 @@
+#logotipo {
+    width: 83px;
+    height: 35.57px;
+
+    font-weight: bold;
+    font-size: 23.7143px;
+    line-height: 36px;  
+    margin-right: 10px;
+    padding-top: 15px;
+}
+
+#search-input {
+    width: 900px;
+    height: 36px;
+    margin-bottom: 10px;
+    border-radius: 5.5px;
+    outline: 0;
+    border: 0 none;
+    padding: 5px;
+    margin-right: 10px;
+    padding-left: 20px;
+}
+
+.container-icons {
+    float: right;
+    padding-top: 20px;
+    margin-bottom: auto;
+    margin-left: 15px;
+}
+
+.container-icons a {
+    margin-right: 1.6rem;
+}
+
+.menu-opcoes ul li {
+    display: inline;
+    margin-left: 20px;
+    border-bottom: none;
+}
+
+.menu-opcoes a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+.menu-opcoes {
+    margin: 2px 50px;
+}
+
+.menu-opcoes li a:hover {
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+}
+
+#search-icon {
+    margin-right: 14px;
+    margin-right: 20px;
+}
+
+#heart-icon {
+    margin-right: 20px;
+}
+
+#shopping-icon {
+    margin-right: 20px;
+}
+
+#user-icon {
+    margin-right: 20px;
+}
+
+.header-content {
+    margin: 10px 5px;
+}
+
+button {
+    padding: 7px;
+    border-radius: 5.5px;
+    outline: 0;
+    border: 0 none;
+}
+
+
+
+
+
+

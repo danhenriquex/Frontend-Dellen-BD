@@ -1,0 +1,16 @@
+#input-name {
+    width: 391px;
+    margin-bottom: 10px;
+    border-radius: 5.5px;
+    outline: 0;
+    border: 0 none;
+    padding: 5px;
+}
+
+.container-login {
+    margin-top: 150px;
+}
+
+.link-cadastro {
+    color: white;
+}

@@ -1,0 +1,193 @@
+.container-carrinho {
+    height: 1000px;
+    width: 100%;
+    background-color: white;
+}
+
+.product-add {
+    display: flex;
+    margin-top: 15px;
+    background-color: #D3D3D3;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.classinfo {
+    padding-top: 350px;
+}
+
+#icon-carrinho {
+    margin-right: 15px;
+}
+
+#text-carrinho {
+    color: red;
+    margin-top: 3px;
+}
+
+#button-remove {
+    margin-left: 60px;
+    font-size: 11px;
+    font-weight: bold;
+    color: red;
+    border: 1px solid red;
+}
+
+#button-remove:hover {
+    background-color: #DCDCDC;
+    transition: 0.3s;
+}
+
+#button-remove-one {
+    color: red;
+    font-size: 10px;
+    transform: translate(5px,40px);
+    background-color: white;
+    font-weight: bold;
+}
+
+.container-image-product {
+    background-color: white;
+    height: 160px;
+    width: 130px;
+    margin-top: 5px;
+}
+
+#image-product {
+    transform: translate(20px,20px);
+}
+
+#quant-product {
+    padding-top: 5px;
+    margin-left: 20px;
+    color: #808080;
+    background-color: #DCDCDC;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: 10px;
+    width: 120px;
+    margin-top: 10px;
+}
+
+.container-products {
+    margin-left: 20px;
+}
+
+.info-products {
+    height: 160px;
+    background-color: #DCDCDC;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#name-product {
+    padding-top: 15px;
+    color: #808080;
+}
+
+#price-product {
+    margin-top: 50px;
+}
+
+#rs {
+    color: red;
+}
+
+.buttons-quantidade {
+    display: flex;
+    margin-top: 15px;
+    background-color: #DCDCDC;
+    align-items: center;
+    padding-top: 10px;
+    width: 150px;
+}
+
+#unidades {
+    background-color: #DCDCDC;
+    width: 150px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+#title-quantidade {
+    margin-top: 10px;
+    background-color: #DCDCDC;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    width: 150px;
+    text-align: center;
+    color: red;
+}
+
+#button-negative {
+    margin-left: 40px;
+    color: white;
+    background-color: red;
+}
+
+#button-positive {
+    color: white;
+    background-color: red;
+}
+
+#contador {
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+#title-total {
+    margin-top: 10px;
+    background-color: #DCDCDC;
+    width: 200px;
+    text-align: center;
+    color: red;
+}
+
+#rodape-total {
+    background-color: #DCDCDC;
+    padding-bottom: 5px;
+    width: 200px;
+    text-align: center;
+    color: #363636;
+}
+
+#price-total {
+    background-color: #DCDCDC;
+    margin-top: 15px;
+    width: 200px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top: 5px;
+    color: red;
+}
+
+.container-products  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-products {
+    margin-left: 10px;
+    margin-bottom: 55px;
+}
+
+.total-compras {
+    margin-left: 15px;
+    margin-bottom: 75px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+

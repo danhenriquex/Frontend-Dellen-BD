@@ -1,0 +1,28 @@
+#table-info {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+    display: ;
+}
+
+#first-row,#second-row,#title-main {
+    border: 0 solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    padding-right: 300px;
+  }
+  
+  .all-tr:nth-last-child(even) {
+    background-color: #dddddd;
+  }
+
+  #first-row {
+      font-weight: bold;
+      color: #1C1C1C;
+  }
+
+  #title-main {
+    background-color: #FFFACD;;
+      color: black;
+      padding: 15px;
+}
