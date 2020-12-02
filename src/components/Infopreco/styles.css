@@ -92,28 +92,23 @@
     margin-left: 200px;
 }
 
-input[type="submitbuy"] {
+
+#finalizar-compra:hover {
+    background: #800000;
+    transition: 0.6s;
+    /* cursor: pointer; */
+}
+
+#finalizar-compra {
+    background: red;
+    color: white;
+    margin-left: 205px;
     width: 135px;
     margin-bottom: 10px;
     border-radius: 5.5px;
     outline: 0;
     border: 0 none;
     padding: 8px;
-}
-
-input[type="submitbuy"].finalizar-compra:hover {
-    background: #800000;
-    transition: 0.6s;
-    /* cursor: pointer; */
-}
-
-.butaofinaliza {
-    margin-left: 205px;
-}
-
-.finalizar-compra {
-    background: red;
-    color: white;
 }
 
 
