@@ -14,7 +14,7 @@ import TableInfo from './components/TableInfo';
 import ForgotPassword from './pages/ForgotPassword';
 import Carrinho from './components/Carrinho';
 import NewItens from './pages/NewItens';
-import InfoPreco from './components/Infopreco';
+import TestCarrinho from './pages/TestCarrinho';
 
 export default function Routes() {
     return(
@@ -27,13 +27,13 @@ export default function Routes() {
             <Route path="/footer" component={Footer} />
             <Route path="/menu" component={Menu} />
             <Route path="/home" component={HomePage} />
-            <Route path="/compra" component={Compra} />
+            <Route path="/compra/:id" component={Compra}/>
             <Route path="/table" component={TableInfo} />
             <Route path="/senha" component={ForgotPassword} />
-            <Route path="/carrinho" component={Carrinho} />
+            <Route path="/carrinho/:id" component={Carrinho} />
             <Route path="/landing" component={LandingPage} />
             <Route path="/newitens" component={NewItens} />
-            <Route path="/infopreco" component={InfoPreco} />
+            <Route path="/test" component={TestCarrinho} />
         </BrowserRouter>
     );
 }

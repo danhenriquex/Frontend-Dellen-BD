@@ -1,11 +1,3 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /*background-image: url('../../assets//images/image-background.svg'); */
-}
-
 .container-cadastro {
     display: flex;
     flex: 1;
@@ -25,73 +17,18 @@ body {
     width: 71px;
     height: 36px;
     color: white;
-    margin-bottom: 50px;
-    margin-right: 315px;
+    margin-bottom: 40px;
 }
 
-input[type="categoria"] {
-    width: 391px;
-    margin-bottom: 20px;
-    border-radius: 5.5px;
+#button-select {
+    padding: 10px;
+    width: 390px;
     outline: 0;
-    border: 0 none;
-    padding: 5px;
 }
 
-input[type="nomeItem"] {
-    width: 391px;
-    margin-bottom: 20px;
-    border-radius: 5.5px;
-    outline: 0;
-    border: 0 none;
-    padding: 5px;
-}
 
-input[type="quantidade"] {
-    width: 391px;
-    margin-bottom: 20px;
-    border-radius: 5.5px;
-    outline: 0;
-    border: 0 none;
-    padding: 5px;
-}
 
-input[type="preco"] {
-    width: 391px;
-    margin-bottom: 20px;
-    border-radius: 5.5px;
-    outline: 0;
-    border: 0 none;
-    padding: 5px;
-}
 
-input[type="imagem"] {
-    width: 391px;
-    margin-bottom: 20px;
-    border-radius: 5.5px;
-    outline: 0;
-    border: 0 none;
-    padding: 5px;
-}
-
-input[type="submit"] {
-    width: 120px;
-    margin-bottom: 10px;
-    border-radius: 5.5px;
-    outline: 0;
-    border: 0 none;
-    padding: 8px;
-}
-
-input[type="submit"].login-newitem:hover {
-    background: #800000;
-    transition: 0.6s;
-}
-
-.login-newitem {
-    background: red;
-    color: white;
-}
 
 
 

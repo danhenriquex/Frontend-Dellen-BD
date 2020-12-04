@@ -3,7 +3,21 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "fale-conosco  ajuda-e-suporte  black-friday"
                          "fale-conosco  ajuda-e-suporte  black-friday";
+    border-top: 1px solid white;
 }
+
+.fale-conosco {
+    margin-top: 10px;
+}
+
+.ajuda-e-suporte {
+    margin-top: 10px;
+}
+
+.black-friday {
+    margin-top: 10px;
+}
+
 
 #title-fale-conosco {
     color: red;

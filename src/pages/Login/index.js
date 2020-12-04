@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 import './styles.css';
 import api from '../../services/api';
-import Carrinho from '../../components/Carrinho';
 
 export default function Login() {
     return(

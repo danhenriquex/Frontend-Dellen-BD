@@ -3,7 +3,6 @@ import LogoTipo from '../../assets/images/logotipo.svg';
 import HeartIcon from '../../assets/images/heart.svg';
 import ShoppingBagIcon from '../../assets/images/shopping-bag.svg';
 import UserIcon from '../../assets/images/user.svg';
-import SearchIcon from '../../assets/images/search1.svg';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
