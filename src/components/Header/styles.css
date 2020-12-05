@@ -22,10 +22,29 @@
 }
 
 .container-icons {
+    display: flex;
     float: right;
     padding-top: 20px;
     margin-bottom: auto;
     margin-left: 15px;
+}
+
+.container-icons .cart{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.container-icons .cart .number {
+    display: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+}
+
+.container-icons .cart .show {
+    display: inline-block;
 }
 
 .container-icons a {

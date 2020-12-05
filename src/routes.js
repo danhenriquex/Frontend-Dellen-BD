@@ -30,7 +30,7 @@ export default function Routes() {
             <Route path="/compra/:id" component={Compra}/>
             <Route path="/table" component={TableInfo} />
             <Route path="/senha" component={ForgotPassword} />
-            <Route path="/carrinho/:id" component={Carrinho} />
+            <Route path="/carrinho" component={Carrinho} />
             <Route path="/landing" component={LandingPage} />
             <Route path="/newitens" component={NewItens} />
             <Route path="/test" component={TestCarrinho} />

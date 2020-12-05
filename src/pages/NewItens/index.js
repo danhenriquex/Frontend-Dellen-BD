@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 export default function Cadastro () {
 
-    const[id_category, SetIdCategory] = useState('')
+    const[id_category, SetIdCategory] = useState(0)
     const[name, SetName] = useState('')
     const[price, setPrice] = useState()
     const[quantity, setQuantity] = useState()
@@ -68,7 +68,7 @@ export default function Cadastro () {
 
             <form onSubmit={HandleProducts} className="container-newitens">
                 <select id="button-select" onChange={HandleFilter}>
-                    <option>Escolha a Categoria </option>
+                    <option value={-1}>Escolha a Categoria </option>
                     {category.map(item => (
                         <option value={item.id}>
                             {item.name}

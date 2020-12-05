@@ -50,12 +50,12 @@ export default function HomePage() {
             </header>
 
             <section className="novidades-home">
-                <Panels product={novidades} title="Novidades" id="conteudo" />
-                <Panels product={esportivos} title="Esportivos" id="conteudo" />
-                <Panels product={acessorios} title="Acessórios" id="conteudo" />
-                <Panels product={juvenil} title="Juvenil" id="conteudo" />
-                <Panels product={home} title="Home" id="conteudo" />
-                <Panels product={sapatilhas} title="Sapatilhas" id="conteudo" />
+                <Panels id_="novidades" product={novidades} title="Novidades" id="conteudo" />
+                <Panels id_="esportivos" product={esportivos} title="Esportivos" id="conteudo" />
+                <Panels id_="acessorios" product={acessorios} title="Acessórios" id="conteudo" />
+                <Panels id_="juvenil" product={juvenil} title="Juvenil" id="conteudo" />
+                <Panels id_="home" product={home} title="Home" id="conteudo" />
+                <Panels id_="sapatilha" product={sapatilhas} title="Sapatilhas" id="conteudo" />
             </section>
 
             <section className="footer-home">

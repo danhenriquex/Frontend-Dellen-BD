@@ -1,17 +1,17 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addToCart, removeFromCart, updateAmount, clearCart, setrestId} from './actions';
+import { addToCart, removeFromCart, updateAmount, clearCart} from './action';
  
 const cart = createReducer([], {
  [addToCart]: (state, action) => {
    const { payload } = action;
    const { food } = payload;
   
-   const bookExists = state.find(plate => plate.food === food);
+   const bookExists = state.find(plate => plate.id === food);
   
    if (bookExists) {
-     bookExists.amount = bookExists.amount + 1;
+     bookExists.qnt = bookExists.qnt + 1;
    } else {
-     payload.amount = 1;
+     payload.qnt = 1;
      state.push(payload);
    }
  },
@@ -35,6 +35,7 @@ const cart = createReducer([], {
  },
  [updateAmount]: (state, action) => {
    const { food, qnt } = action.payload;
+   console.log(food, qnt);
    const bookExists = state.find(plate => plate.food === food);
  
    if (bookExists) {

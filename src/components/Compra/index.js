@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 import TableInfo from '../TableInfo';
@@ -7,14 +7,55 @@ import api from '../../services/api'
 import './styles.css';
 import { Link, useParams } from "react-router-dom";
 
+import * as CartActions from '../../store/modules/cart/action';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+
 export default function Compra(props) {
+
     const {id} = useParams();
     const[produto, setproduto] = useState({});
+
+    const [ qnt, setQnt ] = useState(1);
+
+    function handleChange(e){
+        e.preventDefault();
+
+        setQnt(e.target.value);
+    }
+
+    const dispatch = useDispatch();
+
+    const car = useSelector(state =>
+
+        state.cart.map(plate => ({
+        ...plate,
+        }))
+    );
+
+    console.log(car);
+
+    const cartSize = useSelector(state => state.cart.length);
+
+    function handleAddProduct(product) {
+        console.log(product);
+        dispatch(CartActions.addToCart({...product, qnt: 1, price: product.price, food: product.id}))
+        console.log(cartSize);
+
+    }
     
     useEffect(() => {
         api.get(`/products/${id}`).then(response => {
             setproduto(...response.data.data)
         })},[])
+
+
+    const [ product, setProduct ] = useState({
+        "id": produto,
+        "qnt": 1
+    })
+
+    
 
     return(
         <div className="container-compra">
@@ -55,14 +96,14 @@ export default function Compra(props) {
                                     <option>40</option>
                                 </select>
                                 <h3>QUANTIDADE</h3>
-                                <input type="number" id="quantidade-compra" min="1" max="200" />
+                                <input type="number" onChange={handleChange} id="quantidade-compra"value={qnt} min="1" max="200" />
                             </form>
                         </div>
                     <div className="comprar">
                         <button type="submit" id="button-compra">Comprar</button>
                         <button type="submit" id="button-voltar">Voltar</button>
                     </div>
-                    <Link to={`/carrinho/${produto.id}`} id="link-carrinho">adicionar à sacola.</Link>
+                    <Link onClick={() => handleAddProduct(produto)}id="link-carrinho">adicionar à sacola.</Link>
                 </section>
             </div>
             <div className="informacoes">

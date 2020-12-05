@@ -6,7 +6,7 @@ import './styles.css';
 
 export default function Panels(props) {
     return(
-        <div className="container-paineis">
+        <div className="container-paineis" id={props.id_}>
             <section className="painel novidades">
                 <h2>{props.title}</h2>
                 <ol>
