@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/action';
 
+
 const ItemCar = ({ carrinho }) => {
 
     console.log(carrinho);

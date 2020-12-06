@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import api from '../../services/api';
 import { useSelector, useDispatch } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/action';
+import Header from '../Header';
+import Footer from '../Footer';
+import InfoPreco from '../Infopreco';
 
 import ItemCar from '../Carrinho_item'
 
@@ -45,12 +48,21 @@ export default function Carrinho() {
 
     return (
         <div className="container-carrinho">
+            <div className="header-carrinho">
+                <Header />
+            </div>
             <div className="content-main">
                 <div>
                     {car.map(carrinho => (
                         <ItemCar carrinho={carrinho} />
                     ))}
                 </div>
+            </div>
+            <div className="compra-finalizar-carrinho">
+                <InfoPreco />
+            </div>
+            <div className="footer-carrinho">
+                <Footer />
             </div>
         </div>
     );

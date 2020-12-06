@@ -7,6 +7,8 @@
     display: flex;
     justify-content: center;
     width: 800px;
+    margin-left: 150px;
+    margin-top: 40px;
 }
 
 .product-add {
@@ -185,6 +187,12 @@
     margin-left: 15px;
     margin-bottom: 75px;
     padding-right: 10px;
+}
+
+.compra-finalizar-carrinho {
+    width: 900px;
+    margin-left: 150px;
+    margin-bottom: 50px;
 }
 
 

@@ -1,0 +1,124 @@
+/* body {
+    background-color: white;
+} */
+
+#preco-icon-dollar {
+    width: 16px;
+    margin-right: 10px;
+}
+
+.tableespaco {
+    border-bottom: solid;
+    /* width: 100px; */
+}
+
+.alltable {
+    padding-top: 15px;
+    margin-top: 100px;
+    padding-left: 430px; 
+    padding-right: 430px; 
+    border-style: solid red;
+    background-color: #DCDCDC;
+}
+
+.alltable h1 {
+    color: red;
+}
+
+.alltable {
+    margin-top: 2px;
+    width: 800px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.totaldeprodutos {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #C0C0C0;
+}
+
+.fretetotal {
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #C0C0C0;
+}
+
+.valortotalresult {
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #C0C0C0;
+}
+
+#produtototal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#precoproduto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 250px;
+}
+
+#fretetudo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#fretepreco {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 328px;
+}
+
+#totalprod {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#totalprec {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 200px;
+}
+
+
+#finalizar-compra:hover {
+    background: #800000;
+    transition: 0.6s;
+}
+
+#finalizar-compra {
+    background: red;
+    color: white;
+    margin-left: 600px;
+    width: 135px;
+    margin-bottom: 10px;
+    border-radius: 5.5px;
+    outline: 0;
+    border: 0 none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
