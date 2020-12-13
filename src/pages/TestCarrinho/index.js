@@ -10,6 +10,7 @@ export default function TestCarrinho() {
                <Carrinho />
                <Carrinho />
                <Carrinho />
+               <Carrinho />
            </div>
     );
 }

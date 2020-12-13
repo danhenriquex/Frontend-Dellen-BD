@@ -4,17 +4,42 @@ import * as CartActions from '../../store/modules/cart/action';
 
 
 const ItemCar = ({ carrinho }) => {
-
-    console.log(carrinho);
     const [count, setCount] = useState(0);
 
+    if (carrinho.quantity === 0){
+        carrinho.qnt = 0
+    }
+
     function increment(plate) {
-        dispatch(CartActions.updateAmount({
-            ...plate,
-            food: plate.food,
-            qnt: plate.qnt + 1,
-            price: plate.price,
-        }));
+
+        if (plate.qnt + 1 > carrinho.quantity){
+            
+            dispatch(CartActions.updateAmount({
+                ...plate,
+                food: plate.food,
+                qnt: plate.qnt,
+                price: plate.price,
+            }));
+
+        }else if (carrinho.quantity === 0){
+            console.log('entrou no if mzr')
+            dispatch(CartActions.updateAmount({
+                ...plate,
+                food: plate.food,
+                qnt: carrinho.quantity,
+                price: plate.price,
+            }))
+        }
+        else {
+
+            dispatch(CartActions.updateAmount({
+                ...plate,
+                food: plate.food,
+                qnt: plate.qnt + 1,
+                price: plate.price,
+            }));
+
+        }
     }
 
     function decrement(plate) {

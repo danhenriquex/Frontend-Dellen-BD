@@ -5,7 +5,7 @@ import TableInfo from '../TableInfo';
 import Truck from '../../assets/images/truck.svg';
 import api from '../../services/api'
 import './styles.css';
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 
 import * as CartActions from '../../store/modules/cart/action';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,6 +15,13 @@ export default function Compra(props) {
 
     const {id} = useParams();
     const[produto, setproduto] = useState({});
+    
+    useEffect(() => {
+        api.get(`/products/${id}`).then(response => {
+            setproduto(...response.data.data)
+        })},[])
+
+    const history = useHistory()
 
     const [ qnt, setQnt ] = useState(1);
 
@@ -33,26 +40,37 @@ export default function Compra(props) {
         }))
     );
 
-    console.log(car);
-
     const cartSize = useSelector(state => state.cart.length);
 
-    function handleAddProduct(product) {
-        console.log(product);
-        dispatch(CartActions.addToCart({...product, qnt: 1, price: product.price, food: product.id}))
-        console.log(cartSize);
+    function handleAddProduct(product, red) {
+        
+
+        if (red){
+
+            if (produto.quantity === 0) {
+
+                dispatch(CartActions.addToCart({...product, qnt: 0, price: product.price, food: product.id}))
+                history.push('/carrinho');
+            }else {
+                dispatch(CartActions.addToCart({...product, qnt: 1, price: product.price, food: product.id}))
+                history.push('/carrinho');
+            }
+
+        }else {
+            if (produto.quantity === 0){
+                dispatch(CartActions.addToCart({...product, qnt: 0, price: product.price, food: product.id}))
+            }else {
+                dispatch(CartActions.addToCart({...product, qnt: 1, price: product.price, food: product.id}))
+            }
+        }
 
     }
     
-    useEffect(() => {
-        api.get(`/products/${id}`).then(response => {
-            setproduto(...response.data.data)
-        })},[])
 
 
     const [ product, setProduct ] = useState({
         "id": produto,
-        "qnt": 1
+        "qnt": produto.quantity
     })
 
     
@@ -100,10 +118,10 @@ export default function Compra(props) {
                             </form>
                         </div>
                     <div className="comprar">
-                        <button type="submit" id="button-compra">Comprar</button>
+                        <button onClick={() => handleAddProduct(produto, true)} type="submit" id="button-compra">Comprar</button>
                         <button type="submit" id="button-voltar">Voltar</button>
                     </div>
-                    <Link onClick={() => handleAddProduct(produto)}id="link-carrinho">adicionar à sacola.</Link>
+                    <Link onClick={() => handleAddProduct(produto, false)}id="link-carrinho">adicionar à sacola.</Link>
                 </section>
             </div>
             <div className="informacoes">

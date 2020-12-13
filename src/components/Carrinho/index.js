@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import api from '../../services/api';
 import { useSelector, useDispatch } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/action';
@@ -19,28 +19,22 @@ export default function Carrinho() {
     const car = useSelector(state =>
         state.cart.map(plate => ({
         ...plate,
+        subtotal: Math.trunc(plate.qnt * plate.price),
         }))
     );
 
-    console.log(car);
+    const total = useSelector(state =>
+        state.cart.reduce((totalSum, product) => {
+          return totalSum + product.price * product.qnt;
+        }, 0)
+    );
 
-    useEffect(() => {
-        api.get(`/products/${id}`).then(response => {
-            setCarrinho(...response.data.data)
-        });
-    },[])
+    const dispatch = useDispatch();
+
+    const cartSize = useSelector(state => state.cart.length);
 
     const [count, setCount] = useState(0);
 
-    function Contador (incremento) {
-        if (count + incremento < 0) {
-            setCount(0);
-        }else {
-            setCount(count + incremento);
-        }
-    }
-    
-    const dispatch = useDispatch();
 
     function handleDelete(plate) {
         dispatch(CartActions.removeFromCart({...plate, food: plate.id}));
@@ -59,7 +53,7 @@ export default function Carrinho() {
                 </div>
             </div>
             <div className="compra-finalizar-carrinho">
-                <InfoPreco />
+                <InfoPreco car={car} total={total} />
             </div>
             <div className="footer-carrinho">
                 <Footer />

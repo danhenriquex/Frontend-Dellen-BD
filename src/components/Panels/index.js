@@ -5,6 +5,7 @@ import SloganImage from '../../assets/images/slogan.jpg';
 import './styles.css';
 
 export default function Panels(props) {
+
     return(
         <div className="container-paineis" id={props.id_}>
             <section className="painel novidades">
@@ -12,11 +13,11 @@ export default function Panels(props) {
                 <ol>
                     {props.product.map(produto =>(
                         <li>
-                            <Link to={`/compra/${produto.id}`}>
+                            <Link className={produto.quantity > 0 ? null : "disable"} to={produto.quantity > 0 ? `/compra/${produto.id}` : "/"}>
                                 <figure>
                                     <img src={produto.image_adress} alt="Produto1" id="produto"/>
                                     <figcaption>{produto.name}</figcaption>
-                                    <span>R$ {produto.price}</span>
+                                    <span>{produto.quantity > 0 ? `R$ ${produto.price}` : "Sem estoque"}</span>
                                 </figure>
                             </Link>
                         </li>

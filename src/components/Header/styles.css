@@ -27,6 +27,24 @@
     padding-top: 20px;
     margin-bottom: auto;
     margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-icons .link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.container-icons .link:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-icons .link:first-child p {
+    margin-right: 10px;
 }
 
 .container-icons .cart{

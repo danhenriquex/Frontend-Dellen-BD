@@ -22,13 +22,11 @@ export default function Cadastro () {
         });
     },[])
 
-    console.log(category);
-
     function HandleFilter(e) {
         e.preventDefault();
 
         SetIdCategory(e.target.value);
-        console.log(id_category);
+
     }
 
     async function HandleProducts(e) {

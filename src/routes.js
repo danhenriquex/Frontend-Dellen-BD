@@ -15,18 +15,35 @@ import ForgotPassword from './pages/ForgotPassword';
 import Carrinho from './components/Carrinho';
 import NewItens from './pages/NewItens';
 import TestCarrinho from './pages/TestCarrinho';
+import { Redirect } from 'react-router-dom';
+import HistoricoCompra from './pages/HistoricoCompra';
 
 export default function Routes() {
+
+
+    const PrivateRoute = ({ component: Component, ...rest }) => (
+    
+
+        <Route {...rest} render={props => (
+            localStorage.getItem('isAuth') ? (
+                <Component {...props} />
+    
+            ) : (
+                <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
+    
+            )
+        )}/>
+    )
+
     return(
         <BrowserRouter>
-            <Route path="/" exact component={HomePage} />
             <Route path="/login" component={Login} />
             <Route path="/cadastro" component={Register} />
             <Route path="/header" component={Header} />
             <Route path="/main" component={Panels} />
             <Route path="/footer" component={Footer} />
             <Route path="/menu" component={Menu} />
-            <Route path="/home" component={HomePage} />
+            <PrivateRoute path="/" exact component={HomePage} />
             <Route path="/compra/:id" component={Compra}/>
             <Route path="/table" component={TableInfo} />
             <Route path="/senha" component={ForgotPassword} />
@@ -34,6 +51,7 @@ export default function Routes() {
             <Route path="/landing" component={LandingPage} />
             <Route path="/newitens" component={NewItens} />
             <Route path="/test" component={TestCarrinho} />
+            <Route path="/historico" component={HistoricoCompra} />
         </BrowserRouter>
     );
 }

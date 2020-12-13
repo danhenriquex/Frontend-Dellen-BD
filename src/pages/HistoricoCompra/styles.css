@@ -1,0 +1,48 @@
+.banner-historico {
+    display: flex;
+    background-color: #363636;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#home-icon {
+    padding-bottom: 3px;
+}
+
+#subtitle-historico {
+    color: white;
+}
+
+.compra-historico-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: white;
+    padding: 5px;
+}
+
+#data-name {
+    margin-left: 100px;
+}
+
+#price-name {
+    margin-left: 50px;
+}
+
+#pay-name {
+    margin-left: 30px;
+}
+
+#historico-name {
+    margin-left: 50px;
+}
+
+.footer-component {
+    margin-top: 10px;
+}
+
+
+

@@ -1,0 +1,40 @@
+.content-historico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid black;
+}
+
+#img-historico {
+    margin-right: 15px;
+}
+
+#title-historico {
+    margin-right: 50px;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#data-historico {
+    font-size: 8px;
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#price-historico {
+    margin-left: 30px;
+    font-size: 10px;
+}
+
+#pay-historico {
+    margin-left: 35px;
+    font-size: 10px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
